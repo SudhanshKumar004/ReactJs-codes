@@ -1,0 +1,13 @@
+body{
+    height: 100vh;;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    text-align: center;
+}
