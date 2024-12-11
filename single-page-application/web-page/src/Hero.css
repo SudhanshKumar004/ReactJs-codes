@@ -1,0 +1,14 @@
+.hero{
+    background-image: url(assets/black.jpg);
+    background-position: center;
+    background-size: cover;
+    /* opacity: calc(0.9); */
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.text1{
+    font-size: 118px;
+    color: #ffffff;
+    text-shadow: 10px 0 10px #4682B4, 0 5px 5px black;
+}
