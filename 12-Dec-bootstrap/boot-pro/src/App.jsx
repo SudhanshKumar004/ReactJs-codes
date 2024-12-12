@@ -2,7 +2,7 @@ import './App.css'
 import Nav from './Navbar'
 import Hero from './Hero'
 import Comp from './Component'
-import Card from '../Cards'
+import Card from './Card'
 function App() {
 
   return (
