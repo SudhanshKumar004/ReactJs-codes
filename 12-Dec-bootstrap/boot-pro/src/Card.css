@@ -7,7 +7,8 @@
 
 .container .card:hover{
     
-    transform: translateY(10px)
+    transition: 0.2s;
+    transform: translatey(-10px)
 }
 
 .container .card .card-img-top{

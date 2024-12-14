@@ -5,8 +5,8 @@ import "./Card.css";
 function Card() {
   return (
     <>
-      <div className="container">
-        <div className="card" style={{ width: "18rem" }}>
+      <div className="container" >
+        <div className="card p-2" style={{ width: "20rem" }}>
           <img src={img} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
@@ -19,7 +19,7 @@ function Card() {
             </a>
           </div>
         </div>
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card p-2" style={{ width: "20rem" }}>
           <img src={img2} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
@@ -32,7 +32,7 @@ function Card() {
             </a>
           </div>
         </div>
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card p-2" style={{ width: "20rem" }}>
           <img src={img} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
