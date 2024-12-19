@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import './App.css'
 import Bg from './Bg'
+import TF from './TF'
 
 function App() {
 
@@ -20,13 +21,16 @@ function App() {
 
   return (
     <>
+  <TF />
+
   <h1>{count}</h1>
   <button onClick={add}>+</button>
   <button onClick={del}>-</button>
 
-  <Bg />
+  {/* <Bg /> */}
     </>
   )
 }
 
 export default App
+

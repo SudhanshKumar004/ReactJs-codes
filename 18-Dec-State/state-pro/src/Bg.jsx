@@ -2,25 +2,25 @@ import { useState } from "react"
 
 function Bg(){
 
-    let [cl, setCl] = useState(yellow)
+    let [cl, setCl] = useState({background:"yellow"})
 
     function red(){
-        setCl(cl=red)
+        setCl("red")
     }
     function blue(){
-        setCl(cl=blue)
+        setCl("blue")
     }
     function green(){
-        setCl(cl=green)
+        setCl("green")
     }
     function yellow(){
-        setCl(cl=yellow)
+        setCl("yellow")
     }
 
     return(
 
         <>
-            <div className="divv" style={{height:"100vh", width:"100vw",background:"yellow"}}>
+            <div className="divv" style={{height:"100vh", width:"100vw",background:cl}}>
                 <button onClick={red}>Red</button>
                 <button onClick={blue}>Blue</button>
                 <button onClick={green}>Green</button>
