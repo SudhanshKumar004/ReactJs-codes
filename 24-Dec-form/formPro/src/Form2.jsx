@@ -41,7 +41,7 @@ const Form2 = () =>{
             <br />
             <label htmlFor="">City</label>
             <input type="text" name="city" value={inputname.city} onChange={hinput} />
-            <br />00000000000
+            <br />
             <input type="submit"/>
         </form>
         </>
