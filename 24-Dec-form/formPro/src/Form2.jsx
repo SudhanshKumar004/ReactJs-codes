@@ -1,38 +1,51 @@
 import { useState } from "react"
 
-const Frm2 = ()=>
-{
-    let [h, setH] = useState('')
-    let [l, setL] = useState('')
-    let [sb, setSb] = useState(false)
+const Form2 = () =>{
 
-    function hinput(event)
-    {
-        console.log(event.target.value);
-        setH(event.target.value)
-    }
+    let[inputname,setInput]= useState({
+        username:'',
+        address:'',
+        age:'',
+        num:'',
+        city:''
+        })
 
-    function linput(event)
-    {
+        const hinput = (event) =>{
+        const{name,value} = event.target;
         console.log(event.target.value)
-        setL(event.target.value)
-    }
+        setInput({
+            ...inputname,
+            [name]:value
+        })
+        }
 
-    function sbb()
-    {
-        setSb(true)
-    }
-
-    return (
+        const finalSubmit = (event) =>
+        {
+            event.preventDefault();
+            console.log(inputname)
+        }
+    return(
         <>
-            <h1>my name is {sb ?  h : ''} </h1>
-            <input type="text" onChange={hinput} />
-            <h2>live in {l} </h2>
-            <input type="text" onChange={linput} />
-
-            <button onClick={sbb}>Submit</button>
+        <form onSubmit={finalSubmit}>
+            <label htmlFor="">Name</label>
+            <input type="text" name="username" value={inputname.username} onChange={hinput} />
+            <br />
+            <label htmlFor="">Address</label>
+            <input type="text" name="address" value={inputname.address} onChange={hinput} />
+            <br />
+            <label htmlFor="">Age</label>
+            <input type="text" name="age" value={inputname.age} onChange={hinput} />
+            <br />
+            <label htmlFor="">Number</label>
+            <input type="text" name="num" value={inputname.num} onChange={hinput} />
+            <br />
+            <label htmlFor="">City</label>
+            <input type="text" name="city" value={inputname.city} onChange={hinput} />
+            <br />00000000000
+            <input type="submit"/>
+        </form>
         </>
     )
 }
 
-export default Frm2
+export default Form2 
