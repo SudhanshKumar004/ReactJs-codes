@@ -1,15 +1,23 @@
 const Map2 = () =>{
-    let ar = [
-        "obj":{
+    let ar = [{
+            id:1,
             name:"string",
             age:24,
             city:"bhopal"
+        },
+        {
+            id:2,
+            name:"string2",
+            age:25,
+            city:"Delhi"
         }
     ]
-    let arf = obj.map((e,index)=>{return <li key={index}>{e}</li>})
+    let arf = ar.map((e,index)=>{return <li>{e.id} - {e.name} - {e.age} - {e.city}</li>})
+
+    
     return(
         <>
-        <h1>{arf}</h1>
+     <h1>{arf}</h1>
         </>
     )
 }

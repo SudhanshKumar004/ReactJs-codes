@@ -22,11 +22,17 @@ const Form =()=>{
     const finalSubmit =(event)=>{
         event.preventDefault()
         console.log(inputname);
+        if(inputname.username || inputname.address || inputname.age || inputname.city || inputname.num){
+            alert("All fields required")
+        }
+        else{
+            localStorage.setItem("data",JSON.stringify(inputname))
+        }
         
     }
     return(
         <>
-        <form onSubmit={finalSubmit}>
+        <form onSubmit={finalSubmit}> 
             <label htmlFor="">Name</label>
             <input type="text" name="username" value={inputname.username} onChange={hinput} />
             <br />
