@@ -1,6 +1,8 @@
-import { useState } from "react"
+import { useEffect } from "react";
+import { useState } from "react";
+import Welcome from "./Welcome";
 
-const Form =()=>{
+const Loginn =()=>{
     let[inputname,setInp] = useState({
         username:'',
         address:'',
@@ -9,7 +11,8 @@ const Form =()=>{
         num:''
     })
 
-    let[status,setStatus] = useState(false)
+    let[getdata,setUdata] = useState(null)
+    let[stts,setStts] = useState(false)
 
     const hinput=(event)=>{
         const{name,value} = event.target;
@@ -21,26 +24,34 @@ const Form =()=>{
         
     }
 
-    const finalSubmit =(event)=>{
+    const handleSubmit =(event)=>{
         event.preventDefault()
-        console.log(inputname);
-        if(inputname.username || inputname.address || inputname.age || inputname.city || inputname.num){
-            alert("All fields required")
+        if(inputname.username === getdata.username 
+                && inputname.address === getdata.address 
+                    && inputname.city === getdata.city
+                        && inputname.age === getdata.age
+                            && inputname.num === getdata.num)
+        {
+            alert("Successfull")
+            setStts(true)
         }
         else{
-            localStorage.setItem("data",JSON.stringify(inputname))
+            alert("Data not matched")
         }
-        
     }
-
-    if(status)
-    {
-        return <login />
+    useEffect(()=>{
+        let getdata = JSON.parse(localStorage.getItem("data"))
+        setUdata(getdata)
+    },[])
+    
+    if(stts){
+        return <Welcome />
     }
     
     return(
         <>
-        <form onSubmit={finalSubmit}> 
+        <h1>Login Page</h1>
+        <form onSubmit={handleSubmit}> 
             <label htmlFor="">Name</label>
             <input type="text" name="username" value={inputname.username} onChange={hinput} />
             <br />
@@ -59,9 +70,8 @@ const Form =()=>{
             <input type="submit" />
         </form>
 
-         
         </>
     )
 }
 
-export default Form
+export default Loginn
