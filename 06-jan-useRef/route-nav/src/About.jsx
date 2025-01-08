@@ -1,7 +1,10 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 const About = ()=>{
 
+    let name = useParams()
+    console.log(name);
+    
     let navigate = useNavigate()
     function contactpage()
     {
