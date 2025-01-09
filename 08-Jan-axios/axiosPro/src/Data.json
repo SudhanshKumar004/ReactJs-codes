@@ -1,0 +1,22 @@
+{
+  "userdata": [
+    {
+      "name": "Sudhansh",
+      "age": 24,
+      "city": "Bhopal",
+      "id": "b535"
+    },
+    {
+      "name": "Anil",
+      "age": 24,
+      "city": "Bhopal",
+      "id": "736b"
+    },
+    {
+      "name": "Suraj",
+      "age": 23,
+      "city": "Vidisha",
+      "id": "4af0"
+    }
+  ]
+}
