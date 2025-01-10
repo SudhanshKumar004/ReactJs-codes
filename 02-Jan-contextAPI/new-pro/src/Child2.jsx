@@ -18,9 +18,9 @@ const Child2 = () =>{
             }
         </fdata.Consumer>
 
-        <cdata.provider>
+        <cdata.Provider>
         <Child3 />
-        </cdata.provider>
+        </cdata.Provider>
         </>
     )
 }
