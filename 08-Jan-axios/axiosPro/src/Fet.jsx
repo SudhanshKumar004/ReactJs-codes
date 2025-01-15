@@ -11,7 +11,8 @@ const Fet = ()=>{
     })
     const changeinp= (e) => {
         let{name,value}=e.target;
-        setFrminp({...frminp,[name]:value})
+        setFrminp({...frminp,
+            [name]:value})
     }
 
     const subform = (e) =>{

@@ -12,7 +12,7 @@ function Layout(){
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item" style={{display:"flex"}}>
-          <li className="nav-link active"> <Link to="/"> Home </Link></li>
+          <li className="nav-link active"><Link to="/"> Home </Link></li>
           <li className="nav-link active"><Link to="/about"> About </Link></li>
           <li className="nav-link active"><Link to="/contact"> Contact </Link></li>
           <li className="nav-link active"><Link to="/service"> Service </Link></li>
