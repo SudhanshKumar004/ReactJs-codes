@@ -1,13 +1,18 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { dec, inc } from './Createslice'
 
 const App = () => {
+  let c = useSelector((s)=>s.counter.value)
+  let dis = useDispatch();
   return (
-    <div>
+    
       <>
+      <h1>{c}</h1>
+      <button onClick={()=>dis(inc())}>Inc</button>
+      <button onClick={()=>dis(dec())}>Dec</button>
       </>
-    </div>
   )
 }
 
-export default App0
+export default App 

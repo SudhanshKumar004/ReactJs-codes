@@ -10,4 +10,4 @@ const counter = createSlice({
   })
 
   export const {inc,dec} = counter.actions;
-  export default counter.reducer
+  export default counter.reducer 
